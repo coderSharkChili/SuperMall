@@ -7,14 +7,19 @@
         </div>
       </template>
     </nav-bar>
+
+    <scroll ref='scroll' class="content" :probeType='3'  :pullUpLoad='true'>
     <login/>
     <money/>
     <profile-list></profile-list>
+    </scroll>
+
   </div>
 </template>
 
 <script>
 import NavBar from 'components/common/navbar/NavBar'
+import Scroll from 'components/common/scroll/Scroll'
 
 import Login from './childprofile/Login'
 import Money from './childprofile/Money'
@@ -23,6 +28,7 @@ export default {
   name: "Profile",
   components:{
     NavBar,
+    Scroll,
 
     Login,
     Money,
@@ -39,5 +45,13 @@ export default {
   font-weight: 600;
   color: white;
   background-color: #ff8198;
+}
+.content{
+  position: fixed;
+  top: 44px;
+  bottom: 49px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
 }
 </style>
