@@ -27,7 +27,8 @@ export default {
     },
     computed:{
       showImage(){
-        return this.goodsitem.image || this.goodsitem.show.img
+        // 有顺序要求  只要||左边的值为真就返回自身，反之，如果||左边的值为假就返回||右边的值。
+        return this.goodsitem.img || this.goodsitem.image || this.goodsitem.show.img
       }
     },
     methods: {
