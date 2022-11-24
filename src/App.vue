@@ -2,8 +2,7 @@
   <div id="app">
     <main-tabbar></main-tabbar>
     
-    <!-- <keep-alive 保存组件状态  Vue3.x 新写法-->
-    
+    <!-- <keep-alive 保存组件状态  Vue3.x 新写法11-->
      <router-view v-slot='{Component}'>
        <keep-alive exclude="Detail">
        <component :is="Component"/>
